@@ -1,8 +1,14 @@
 // src/App.js
 import React, { useEffect, useState } from 'react';
-import { signInWithGoogle, signOutUser } from './firebaseAuth';
+import { signInWithGoogle, signOutUser } from './services/firebaseAuth.js';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import app from './firebase';
+import app from './services/firebase.js';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Dashboard from './pages/Dashboard';
+import Notes from './pages/Notes';
+import Tasks from './pages/Tasks';
+import Home from './pages/Home';
+
 
 const auth = getAuth(app);
 
@@ -22,6 +28,16 @@ function App() {
       {user ? (
         <>
           <p>Welcome, {user.displayName}</p>
+          <Router>
+            <div className="App">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/notes" element={<Notes />} />
+                <Route path="/tasks" element={<Tasks />} />
+              </Routes>
+            </div>
+          </Router>
           <button onClick={signOutUser}>Sign Out</button>
         </>
       ) : (
