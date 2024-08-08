@@ -1,10 +1,15 @@
 // src/App.js
 import React from 'react';
-import app from './firebase'; // Import your firebase setup
+import { signInWithGoogle, signOutUser } from './firebaseAuth'; // Import your authentication functions
 
 function App() {
-  console.log('Firebase App Initialized:', app);
-  return <div className="App">Your App Content</div>;
+  return (
+    <div className="App">
+      <h1>Notion Clone</h1>
+      <button onClick={signInWithGoogle}>Sign In with Google</button>
+      <button onClick={signOutUser}>Sign Out</button>
+    </div>
+  );
 }
 
 export default App;
