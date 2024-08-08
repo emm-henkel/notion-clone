@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 // src/App.js
 import React from 'react';
 import app from './firebase'; // Import your firebase setup
