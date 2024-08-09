@@ -1,14 +1,12 @@
 // src/App.js
 import React, { useEffect, useState } from 'react';
-import { signInWithGoogle, signOutUser } from './services/firebaseAuth.js';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import app from './services/firebase.js';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import Notes from './pages/Notes';
 import Tasks from './pages/Tasks';
-import Home from './pages/Home';
-
+import Navigation from './components/Navigation';
 
 const auth = getAuth(app);
 
@@ -23,25 +21,22 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <h1>Notion Clone</h1>
+    <div>
       {user ? (
-        <>
-          <p>Welcome, {user.displayName}</p>
-          <Router>
-            <div className="App">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/notes" element={<Notes />} />
-                <Route path="/tasks" element={<Tasks />} />
-              </Routes>
-            </div>
-          </Router>
-          <button onClick={signOutUser}>Sign Out</button>
+        <> {/* no idea what this does  */}
+        <Navigation />
+        <Router>
+          <div>
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/notes" element={<Notes />} />
+              <Route path="/tasks" element={<Tasks />} />
+            </Routes>
+          </div>
+        </Router>
         </>
       ) : (
-        <button onClick={signInWithGoogle}>Sign In with Google</button>
+        <Navigation />
       )}
     </div>
   );

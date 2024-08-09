@@ -5,6 +5,8 @@ import app from './firebase';
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
+export { auth };
+
 // Function to handle Google Sign-In
 export const signInWithGoogle = async () => {
   try {
