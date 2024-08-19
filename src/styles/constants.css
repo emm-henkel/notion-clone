@@ -1,0 +1,15 @@
+:root {
+  --themeBlack: #252619;
+  --themeWhite: #c6cece;
+  --themeDarkish: #8c7a4c;
+  --themeDark: #53391c;
+  --themeLight: #c8c59f;
+  --themeLightish: #ccae79;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--themeDark); /* Brown background */
+  min-height: 100vh;
+}

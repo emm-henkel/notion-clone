@@ -1,34 +1,28 @@
-/* src/styles/navigation.css */
-:root {
-    --color1: #8c7a4c;
-    --color2: #252619;
-    --color3: #c6cece;
-    --color4: #53391c;
-    --color5: #c8c59f;
-    --color6: #ccae79;
-  }
+@import './constants.css';
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: var(--color1);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    background-color: var(--themeDarkish);
+    box-shadow: var(--themeBlack);
   }
   
   .logo {
-    font-size: 24px;
+    font-size: 3rem;
+    padding: 1rem;
   }
   
   .link {
     text-decoration: none;
-    color: black;
+    color: var(--themeBlack);
   }
   
-  .authSection {
+  .accountBlock {
     display: flex;
     align-items: center;
+    padding-right: 3rem;
   }
   
   .userIcon {
@@ -42,8 +36,8 @@
     padding: 5px 10px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #007bff;
-    color: white;
+    background-color: var(--themeLight);
+    color: var(--themeBlack);
     border: none;
     border-radius: 5px;
   }

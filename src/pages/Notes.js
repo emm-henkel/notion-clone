@@ -1,8 +1,12 @@
-// src/pages/Notes.js
 import React from 'react';
 
-function Notes() {
-  return <div>Notes Page</div>;
-}
+const Notes = () => {
+  return (
+    <div>
+      <h2>Notes</h2>
+      {/* Notes functionality will go here */}
+    </div>
+  );
+};
 
 export default Notes;

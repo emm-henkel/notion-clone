@@ -1,8 +1,12 @@
-// src/pages/Tasks.js
 import React from 'react';
 
-function Tasks() {
-  return <div>Tasks Page</div>;
-}
+const Tasks = () => {
+  return (
+    <div>
+      <h2>Daily Tasks</h2>
+      {/* Tasks functionality will go here */}
+    </div>
+  );
+};
 
 export default Tasks;

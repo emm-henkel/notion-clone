@@ -1,0 +1,7 @@
+@import './constants.css';
+
+.homepageBackground {
+    background-color: var(--themeDark);
+    width: 100%;
+    height: 100vh;
+}

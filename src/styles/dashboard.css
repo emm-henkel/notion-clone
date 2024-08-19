@@ -1,0 +1,19 @@
+@import './constants.css';
+
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.dashboard-column {
+    flex: 1;
+    margin: 10px;
+    background-color: var(--themeLight);
+    color: var(--themeBlack);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--themeBlack);
+}
