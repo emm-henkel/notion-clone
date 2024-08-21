@@ -1,7 +1,7 @@
 
 import React from 'react';
 import '../styles/dashboard.css';
-import Calendar from './Calendar';
+import CalendarComponent from '../components/CalendarComponent';
 import Notes from './Notes';
 import Tasks from './Tasks';
 
@@ -9,7 +9,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <div className="dashboard-column">
-        <Calendar />
+        <CalendarComponent />
       </div>
       <div className="dashboard-column">
         <Notes />

@@ -1,0 +1,52 @@
+@import 'constants.css'
+
+.calendar-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.days-row {
+    display: flex;
+}
+
+.day-name, .day-cell {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.day-name {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
+
+.day-cell {
+    min-height: 80px;
+    border-top: 1px solid #ddd;
+}
+
+.day-cell.disabled {
+    color: #ccc;
+}
+
+.day-number {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
