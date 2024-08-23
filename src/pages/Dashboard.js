@@ -12,10 +12,10 @@ const Dashboard = () => {
         <CalendarComponent />
       </div>
       <div className="dashboard-column">
-        <Notes />
+        <CalendarComponent />
       </div>
       <div className="dashboard-column">
-        <Tasks />
+        <CalendarComponent />
       </div>
     </div>
   );

@@ -9,11 +9,15 @@
 }
 
 .dashboard-column {
+    display: flex;
+    width: 100%;
     flex: 1;
+    min-width: .166666666666vw;
     margin: 10px;
-    background-color: var(--themeLight);
+    background-color: var(--themeLightish);
     color: var(--themeBlack);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: var(--themeRadius);
     box-shadow: var(--themeBlack);
 }
+

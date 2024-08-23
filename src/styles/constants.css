@@ -4,7 +4,8 @@
   --themeDarkish: #8c7a4c;
   --themeDark: #53391c;
   --themeLight: #c8c59f;
-  --themeLightish: #ccae79;
+  --themeLightish: #af966c;
+  --themeRadius: 10px;
 }
 
 html, body {

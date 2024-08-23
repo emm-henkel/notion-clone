@@ -1,21 +1,22 @@
-@import 'constants.css'
+@import 'constants.css';
 
 .calendar-container {
     width: 100%;
-    max-width: 500px;
+    max-width: 100%;
     margin: 0 auto;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    background-color: var(--themeWhite);
+    border: 1px solid var(--themeDarkish);
+    border-radius: var(--themeRadius);
     overflow: hidden;
 }
 
-.header {
+.month {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
-    padding: 10px 0;
+    background-color: var(--themeWhite);
+    padding: 1rem 0;
     font-size: 1.25rem;
     font-weight: bold;
 }
@@ -25,23 +26,26 @@
 }
 
 .day-name, .day-cell {
+    width: 10%;
     flex: 1;
-    padding: 10px;
-    text-align: center;
+    padding: .5rem;
+    text-align: left;
 }
 
 .day-name {
-    background-color: #e0e0e0;
+    background-color: var(--themeWhite);
     font-weight: bold;
 }
 
 .day-cell {
+    padding: .5rem;
+    text-align: left;
     min-height: 80px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--themeDarkish);
 }
 
 .day-cell.disabled {
-    color: #ccc;
+    color: var(--themeLightish);
 }
 
 .day-number {
@@ -50,3 +54,13 @@
     font-weight: bold;
     margin-bottom: 5px;
 }
+
+/* Highlight the current date */
+.day-cell.today {
+    background-color: var(--themeDarkish);
+    border: 2px solid var(--themeLightish);
+    border-radius: var(--themeRadius);
+    font-weight: bold;
+    color: #000;
+}
+

@@ -1,24 +1,23 @@
 // CalendarComponent.js
 import React from 'react';
-import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays } from 'date-fns';
+import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameDay } from 'date-fns';
 import '../styles/calendarComponent.css';
 
 const CalendarComponent = () => {
+    const today = new Date();
+
     const renderHeader = () => {
         const dateFormat = 'MMMM yyyy';
-        const today = new Date();
 
         return (
-            <div className="header">
-                <div className="current-month">
-                    {format(today, dateFormat)}
-                </div>
+            <div className="month">
+                {format(today, dateFormat)}
             </div>
         );
     };
 
     const renderDays = () => {
-        const dateFormat = 'EEEE';
+        const dateFormat = 'EEE';
         const days = [];
 
         let startDate = startOfWeek(new Date());
@@ -49,8 +48,12 @@ const CalendarComponent = () => {
         while (day <= endDate) {
             for (let i = 0; i < 7; i++) {
                 formattedDate = format(day, dateFormat);
+                const isToday = isSameDay(day, today);
                 days.push(
-                    <div className={`day-cell ${format(day, 'M') !== format(monthStart, 'M') ? 'disabled' : ''}`} key={day}>
+                    <div
+                        className={`day-cell ${format(day, 'M') !== format(monthStart, 'M') ? 'disabled' : ''} ${isToday ? 'today' : ''}`}
+                        key={day}
+                    >
                         <span className="day-number">{formattedDate}</span>
                     </div>
                 );
